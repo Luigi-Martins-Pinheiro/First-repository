@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Magalhães Studio</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Agendamento - Magalhães Studio</h1>
+        <form id="form-agendamento" action="agendamento.php" method="POST">
+
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone com WhatsApp:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes do Agendamento</legend>
+                <label for="data">Data do Agendamento:</label>
+                <input type="date" id="data" name="data_agendamento" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora_agendamento" required>
+
+                <label>Tipo de Cabelo:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo_cabelo" value="1A" required> 1A</label>
+                    <label><input type="radio" name="tipo_cabelo" value="2B"> 2B</label>
+                    <label><input type="radio" name="tipo_cabelo" value="3C"> 3C</label>
+                    <label><input type="radio" name="tipo_cabelo" value="4C"> 4C</label>
+                </div>
+
+                <label for="tipo_tranca">Tipo de Trança Desejada:</label>
+                <select id="tipo_tranca" name="tipo_tranca" required>
+                    <option value="">Selecione</option>
+                    <option value="Box Braids">Box Braids</option>
+                    <option value="Trança Nagô">Trança Nagô</option>
+                    <option value="Jumbo">Jumbo</option>
+                </select>
+
+                <label for="comprimento">Comprimento do cabelo atual:</label>
+                <select id="comprimento" name="comprimento_cabelo">
+                    <option value="Curto">Curto</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Longo">Longo</option>
+                </select>
+
+                <label>Deseja aplicar fibra ou cabelo natural?</label>
+                <label><input type="radio" name="usar_fibra" value="1" required> Fibra</label>
+                <label><input type="radio" name="usar_fibra" value="0"> Natural</label>
+
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+                <label><input type="checkbox" name="aceita_lembrete" value="1"> Aceito receber lembretes por
+                    WhatsApp</label>
+            </fieldset>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </main>
+
+    <script src="agendamento.js"></script>
+</body>
+</html>
